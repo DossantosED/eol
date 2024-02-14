@@ -4,6 +4,10 @@
 
     docker-compose up
 
+## Base de datos
+
+    ejecutar scripts.sql
+
 # REST API
 
 
@@ -115,3 +119,9 @@
             "fecha_creacion": "2024-02-08 21:22:57"
         }
     ]
+
+    ## Ejecutar Cron Job
+
+    Linux
+    0 0 5 * * /usr/bin/python3 /generar_lote.py
+    Windows: crear tarea programada y agregar generar_lote.py
