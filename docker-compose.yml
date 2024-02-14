@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: suscripciones
+      MYSQL_USER: test
+      MYSQL_PASSWORD: 1234
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  php:
+    image: public.ecr.aws/m7e8v1y7/zenrise-development:php56
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+volumes:
+  mysql_data:

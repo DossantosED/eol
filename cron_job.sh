@@ -1,0 +1,1 @@
+0 0 5 * * /usr/bin/python3/generar_lote.py
