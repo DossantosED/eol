@@ -12,7 +12,7 @@
 ### Request
 
 `POST /api/clientes/create`
-    body:
+
     {
         "nombre_barrio_edificio" : "Recoleta",
         "plan_id" : 1,
