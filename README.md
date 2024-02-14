@@ -120,7 +120,7 @@
         }
     ]
 
-    ## Ejecutar Cron Job
+## Ejecutar Cron Job
 
     Linux
     0 0 5 * * /usr/bin/python3 /generar_lote.py
